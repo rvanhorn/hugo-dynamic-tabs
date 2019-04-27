@@ -9,23 +9,23 @@ Please note, both shortcodes use [Bootstrap Tabs](https://getbootstrap.com/docs/
 2. Place both shortcodes in your project's **layouts/shortcodes** folder. 
 3. In your markdown file, add the following example code. 
 ```
-{{% tabs tabsTotal="3" tabName1="Tab 1" tabName2="Tab 2" tabName3="Tab 3" %}}
-{{% tab tabNum="1" %}}
+{{< tabs tabTotal="3" tabID="1" tabName1="Tab 1" tabName2="Tab 2" tabName3="Tab 3" >}}
+{{< tab tabNum="1" >}}
 
 **Tab 1 Content**
 
-{{% /tab %}}
-{{% tab tabNum="2" %}}
+{{< /tab >}}
+{{< tab tabNum="2" >}}
 
 **Tab 2 Content**
 
-{{% /tab %}}
-{{% tab tabNum="3" %}}
+{{< /tab >}}
+{{< tab tabNum="3" >}}
 
 **Tab 3 Content**
 
-{{% /tab %}}
-{{% /tabs %}}
+{{< /tab >}}
+{{< /tabs >}}
 ```
 
 ## Shortcodes Explanation
@@ -39,6 +39,7 @@ This is the parent shortcodes that wraps around all nested tab shortcodes in the
 | Variable  | Description |
 | --------- | ----------- |
 | tabsTotal | This variable is used to generate the tab navigation. Simply set it to the amount of tab shortcodes you have. In the above example, since there are **three** nested tab shortcodes, you would set tabsTotal to **three**.
+| tabID     | This variable is used to assign a unique number to the tab group allowing you to have multiple tab groups with the same values for **tabNameX**. Please note, each tab group must have its own unique number. 
 | tabNameX  | This variable is used to generate each tab header based on how many nested tab shortcodes there are. Where **X** in the is the next sequential number, always starting at **one**. In the above example, there are **three** nested tab shortcodes so **tabName1**, **tabName2** & **tabName3** were added.  
 
 ### tab.html
@@ -57,6 +58,18 @@ This is a child shortcode that is nested in the tabs shortcodes. Each tab shortc
 - Make sure **tabsTotal** is equal to the total amount of tab shortcodes you have. 
 - Make sure **tabNameX** exists for each tab shortcode in the tabs shortcode. 
 - Make sure your nested tab shortcodes **tabNum** are in sequential order. 
+
+##### Multiple Tab Groups Changing With a Single Click
+
+- Make sure each tab group has a unique **tabID**. 
+
+## Changelog
+
+1.10 - April 26th, 2019
+- Added a new variable, **tabID** that allows multiple tab groups on the same page to have the same value for **tabNameX**. 
+
+1.00 - April 26th, 2019
+- Initial Release
 
 ## Credits
 

@@ -1,22 +1,26 @@
-{{ $tabsTotal := .Get "tabsTotal" }}
-{{ $tabsUniqueID := delimit (shuffle (seq 5)) "" }}
+{{/* Hugo Dynamic Tabs */}}
+{{/* Version 1.1.0 */}}
+{{/* https://github.com/rvanhorn/hugo-dynamic-tabs */}}
 
 <nav>
 	<div class="nav nav-tabs" id="nav-tab" role="tablist">
 
-		{{ range $i, $sequence := (seq $tabsTotal) }}
+		{{ $tabTotal := .Get "tabTotal" }}
+		{{ range $i, $sequence := (seq $tabTotal) }}
 
-		{{ $tabName := $.Get (print "tabName" $sequence) }}
+		{{ $tabID := $.Get "tabID" }}
+		{{ $tabName := (print "tabName" $sequence) }}
+		{{ $tabHREF := (print "tab" $tabID $sequence) }}
 
 		{{ if eq $sequence 1 }}
 
-		<a class="nav-item nav-link active" id="nav-{{ $tabName | urlize }}" data-toggle="tab" href="#{{ $tabName | urlize }}" role="tab"
-		   aria-controls="nav-home" aria-selected="true">{{ $tabName }}</a>
+		<a class="nav-item nav-link active" id="nav-{{ $tabID }}" data-toggle="tab" href="#{{ $tabHREF | urlize }}" role="tab"
+		   aria-controls="nav-home" aria-selected="true">{{ $.Get $tabName }}</a>
 
 		{{ else }}
 
-		<a class="nav-item nav-link" id="nav-{{ $tabName | urlize }}" data-toggle="tab" href="#{{ $tabName | urlize }}" role="tab"
-		   aria-controls="nav-home" aria-selected="false">{{ $tabName }}</a>
+		<a class="nav-item nav-link" id="nav-{{ $tabID }}" data-toggle="tab" href="#{{ $tabHREF | urlize }}" role="tab"
+		   aria-controls="nav-home" aria-selected="false">{{ $.Get $tabName }}</a>
 
 		{{ end }}
 		{{ end }}
@@ -24,7 +28,7 @@
 	</div>
 </nav>
 
-<div class="tab-content" id="{{ $tabsUniqueID }}">
+<div class="tab-content" id="{{ $.Get "tabID" }}">
 
 {{ .Inner }}
 
