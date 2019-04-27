@@ -1,0 +1,31 @@
+{{ $tabsTotal := .Get "tabsTotal" }}
+{{ $tabsUniqueID := delimit (shuffle (seq 5)) "" }}
+
+<nav>
+	<div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+		{{ range $i, $sequence := (seq $tabsTotal) }}
+
+		{{ $tabName := $.Get (print "tabName" $sequence) }}
+
+		{{ if eq $sequence 1 }}
+
+		<a class="nav-item nav-link active" id="nav-{{ $tabName | urlize }}" data-toggle="tab" href="#{{ $tabName | urlize }}" role="tab"
+		   aria-controls="nav-home" aria-selected="true">{{ $tabName }}</a>
+
+		{{ else }}
+
+		<a class="nav-item nav-link" id="nav-{{ $tabName | urlize }}" data-toggle="tab" href="#{{ $tabName | urlize }}" role="tab"
+		   aria-controls="nav-home" aria-selected="false">{{ $tabName }}</a>
+
+		{{ end }}
+		{{ end }}
+
+	</div>
+</nav>
+
+<div class="tab-content" id="{{ $tabsUniqueID }}">
+
+{{ .Inner }}
+
+</div>
