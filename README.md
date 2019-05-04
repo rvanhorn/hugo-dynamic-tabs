@@ -5,7 +5,7 @@ Please note, both shortcodes use [Bootstrap Tabs](https://getbootstrap.com/docs/
 
 ## How to Install
 
-#### Theme Component
+### Theme Component
 
 1. First clone this Git repo ``git clone https://github.com/rvanhorn/hugo-dynamic-tabs themes/hugo-dynamic-tabs``.
 2. In your **config.yaml** or **config.toml** file, add the following to your ``theme`` list variable,``hugo-dynamic-tabs``. Please note,``hugo-dynamic-tabs`` needs to be listed before your actual theme. 
@@ -22,7 +22,7 @@ theme = ["hugo-dynamic-tabs", "my-theme"]
 
 ```
 
-#### Manual Install
+### Manual Install
 
 1. Copy or download the two shortcodes files located in **layouts/shortcodes**. 
 2. Place both shortcodes in your project's **layouts/shortcodes** folder. 
