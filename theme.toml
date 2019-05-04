@@ -1,0 +1,12 @@
+name = "Hugo Dynamic Tabs"
+license = "MIT"
+licenselink = "https://github.com/rvanhorn/hugo-dynamic-tabs/blob/master/LICENSE.md"
+description = "A Hugo shortcode that allows you to add dynamic tabs in your markdown files."
+homepage = "https://github.com/rvanhorn/hugo-dynamic-tabs"
+tags = ["component", "tabs"]
+features = ["unlimited tabs"]
+min_version = "0.55"
+
+[author]
+    name = "Richard Van Horn"
+    homepage = "https://github.com/rvanhorn/"
