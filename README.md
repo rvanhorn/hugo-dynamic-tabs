@@ -7,7 +7,7 @@ Please note, both shortcodes use [Bootstrap Tabs](https://getbootstrap.com/docs/
 
 #### Theme Component
 
-1. First clone this Git repo ``git clone https://github.com/rvanhorn/hugo-dynamic-tabs``.
+1. First clone this Git repo ``git clone https://github.com/rvanhorn/hugo-dynamic-tabs themes/hugo-dynamic-tabs``.
 2. In your **config.yaml** or **config.toml** file, add the following to your ``theme`` list variable,``hugo-dynamic-tabs``. Please note,``hugo-dynamic-tabs`` needs to be listed before your actual theme. 
 
 **config.yaml Example**
