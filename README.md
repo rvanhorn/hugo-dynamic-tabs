@@ -1,7 +1,7 @@
 # Hugo Dynamic Tabs
 This shortcodes allows you to easily add tabs to your markdown files. There is no hardcoded limit to the number of tab groups you can have or the amount of tabs in a tab group. 
 
-Please note, both shortcodes use [Bootstrap Tabs](https://getbootstrap.com/docs/4.1/components/navs/#tabs) but can be changed to fit your needs.
+Please note, both shortcodes use [Bootstrap Tabs](https://getbootstrap.com/docs/4.4/components/navs/#tabs) but can be changed to fit your needs.
 
 ## How to Install
 
@@ -11,7 +11,6 @@ Please note, both shortcodes use [Bootstrap Tabs](https://getbootstrap.com/docs/
 2. In your **config.yaml** or **config.toml** file, add the following to your ``theme`` list variable,``hugo-dynamic-tabs``. Please note,``hugo-dynamic-tabs`` needs to be listed before your actual theme. 
 
 **config.yaml Example**
-
 ```
 theme: ["hugo-dynamic-tabs", "my-theme"]
 ```
@@ -19,7 +18,6 @@ theme: ["hugo-dynamic-tabs", "my-theme"]
 **config.toml Example**
 ```
 theme = ["hugo-dynamic-tabs", "my-theme"]
-
 ```
 
 ### Manual Install
@@ -41,7 +39,7 @@ You need at least one nested tab shortcode inside the tabs shortcode for this th
 {{< /tabs >}}
 ```
 
-The following is an example of a Hugo Dynamic Tabs being used with multiple nested tab shortcodes.
+The following is an example of Hugo Dynamic Tabs being used with multiple nested tab shortcodes.
 
 ```
 {{< tabs tabTotal="3" tabID="1" tabName1="Tab 1" tabName2="Tab 2" tabName3="Tab 3" >}}
@@ -97,6 +95,10 @@ This is a child shortcode that is nested in the tabs shortcodes. Each tab shortc
 ##### Multiple Tab Groups Changing With a Single Click
 
 - Make sure each tab group has a unique **tabID**. 
+
+##### Markdown not Rendered Properly 
+
+- You may need to change the shortcode delimiter from **<** and **>** to **%**. 
 
 ## Changelog
 
