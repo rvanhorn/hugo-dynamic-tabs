@@ -100,7 +100,19 @@ This is a child shortcode that is nested in the tabs shortcodes. Each tab shortc
 
 - You may need to change the shortcode delimiter from **<** and **>** to **%**. 
 
+## Demo Site
+
+I've created a simple demo showing the shortcode in action.
+
+[Hugo Dynamic Tabs Demo](https://hugo-dynamic-tabs.netlify.com/)
+
+You can find the code in the **demo** folder in the repo. 
+
 ## Changelog
+
+1.11 - April 11th, 2020
+- Updated **README.md**.
+- Added demo site.
 
 1.11 - May 3rd, 2019
 - Updated **README.md**.
@@ -114,6 +126,6 @@ This is a child shortcode that is nested in the tabs shortcodes. Each tab shortc
 
 ## Credits
 
-Copyright ©2019, Richard Van Horn.
+Copyright ©2020, Richard Van Horn.
 
 Thanks to the [Hugo](https://github.com/gohugoio/hugo) team for making this possible!
