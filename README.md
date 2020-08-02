@@ -100,6 +100,10 @@ This is a child shortcode that is nested in the tabs shortcodes. Each tab shortc
 
 - You may need to change the shortcode delimiter from **<** and **>** to **%**. 
 
+##### Tabs not showing properly / css issues.
+
+- You need to use a theme that supports bootstrap **4** or add it manually to your project.
+
 ## Demo Site
 
 I've created a simple demo showing the shortcode in action.
