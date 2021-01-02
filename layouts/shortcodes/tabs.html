@@ -10,12 +10,12 @@
 
 		{{ if eq $sequence 1 }}
 
-		<a class="nav-item nav-link active" id="nav-{{ $tabID }}" data-toggle="tab" href="#{{ $tabHREF | urlize }}" role="tab"
+		<a class="nav-item nav-link active" id="nav-{{ $tabID }}" data-toggle="tab" data-target="#{{ $tabHREF | urlize }}" role="tab"
 		   aria-controls="nav-home" aria-selected="true">{{ $.Get $tabName }}</a>
 
 		{{ else }}
 
-		<a class="nav-item nav-link" id="nav-{{ $tabID }}" data-toggle="tab" href="#{{ $tabHREF | urlize }}" role="tab"
+		<a class="nav-item nav-link" id="nav-{{ $tabID }}" data-toggle="tab" data-target="#{{ $tabHREF | urlize }}" role="tab"
 		   aria-controls="nav-home" aria-selected="false">{{ $.Get $tabName }}</a>
 
 		{{ end }}
