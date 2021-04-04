@@ -100,9 +100,9 @@ This is a child shortcode that is nested in the tabs shortcodes. Each tab shortc
 
 - You may need to change the shortcode delimiter from **<** and **>** to **%**. 
 
-##### Tabs not showing properly / css issues.
+##### Tabs not Showing Properly/CSS Issues.
 
-- You need to use a theme that supports bootstrap **4** or add it manually to your project.
+- This shortcode was built using [Bootstrap](https://getbootstrap.com/docs/4.4/) and will require some modification to **tab.html** and **tabs.html** to work with another framework or your own custom code.
 
 ## Demo Site
 
