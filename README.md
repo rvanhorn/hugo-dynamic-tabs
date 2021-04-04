@@ -27,7 +27,7 @@ theme = ["hugo-dynamic-tabs", "my-theme"]
 
 ## How to Use
 
-You need at least one nested tab shortcode inside the tabs shortcode for this theme component to properly work. Please see the **Shortcodes Explanation** section for information on what each variable does. 
+You need at least one nested tab shortcode inside the tabs shortcode for this theme component to properly work. Please see the **[Shortcodes Explanation](#Shortcodes-Explanation)** section for information on what each variable does. 
 
 ```
 {{< tabs tabTotal="1" tabID="1" tabName1="Tab 1" >}}
