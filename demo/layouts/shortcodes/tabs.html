@@ -2,29 +2,20 @@
 	<div class="nav nav-tabs" id="nav-tab" role="tablist">
 
 		{{ $tabTotal := .Get "tabTotal" }}
+		{{ $tabName := $.Scratch.Get "tabName" }}
+		{{ $tabID := delimit (shuffle (seq 1 5)) "" }}
+
 		{{ range $i, $sequence := (seq $tabTotal) }}
 
-		{{ $tabID := $.Get "tabID" }}
-		{{ $tabName := (print "tabName" $sequence) }}
-		{{ $tabHREF := (print "tab" $tabID $sequence) }}
+		<a class="nav-item nav-link {{ if eq $i 0 }} active {{ end }}" id="nav-{{ $tabID }}" data-toggle="tab" href="#{{ lower (replaceRE "(\\s)" "" (index $tabName $i)) }}"
+		role="tab" aria-controls="nav-home" aria-selected="true">{{ index $tabName $i }}</a>
 
-		{{ if eq $sequence 1 }}
-
-		<a class="nav-item nav-link active" id="nav-{{ $tabID }}" data-toggle="tab" href="#{{ $tabHREF | urlize }}" role="tab"
-		   aria-controls="nav-home" aria-selected="true">{{ $.Get $tabName }}</a>
-
-		{{ else }}
-
-		<a class="nav-item nav-link" id="nav-{{ $tabID }}" data-toggle="tab" href="#{{ $tabHREF | urlize }}" role="tab"
-		   aria-controls="nav-home" aria-selected="false">{{ $.Get $tabName }}</a>
-
-		{{ end }}
 		{{ end }}
 
 	</div>
 </nav>
 
-<div class="tab-content" id="{{ $.Get "tabID" }}">
+<div class="tab-content" id="{{ $tabID }}">
 
 {{ .Inner }}
 
