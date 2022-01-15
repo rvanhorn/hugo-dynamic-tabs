@@ -18,7 +18,7 @@ These shortcodes can be easily modified to work with any framework or custom CSS
 
 ### Theme Component
 
-1. First clone this Git repo into your **themes** folder. ``git clone https://github.com/rvanhorn/hugo-dynamic-tabs themes/hugo-dynamic-tabs``.
+1. First clone this Git repo into your **themes** folder. ``git clone -b master https://github.com/rvanhorn/hugo-dynamic-tabs themes/hugo-dynamic-tabs``.
 2. In your **config.yaml** or **config.toml** file, add the following to your ``theme`` list variable,``hugo-dynamic-tabs``. Please note,``hugo-dynamic-tabs`` needs to be listed before your actual theme. 
 
 **config.yaml Example**
