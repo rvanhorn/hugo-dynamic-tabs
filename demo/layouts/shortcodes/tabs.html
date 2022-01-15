@@ -8,7 +8,7 @@
 
 		{{ range $i, $sequence := (seq $tabTotal) }}
 
-		<a class="nav-item nav-link {{ if eq $i 0 }} active {{ end }}{{ if in $tabRightAlign $i }} ml-auto {{ end }}"
+		<a class="nav-item nav-link {{ if eq $i 0 }} active {{ end }}{{ if in $tabRightAlign (add 1 $i) }} ml-auto {{ end }}"
 		   id="nav-{{ (index $tabID $i) }}" data-toggle="tab" href="#{{ (index $tabID $i) }}"
 		   role="tab" aria-controls="nav-home" aria-selected="true">{{ (replaceRE "(\\s)" "" (index $tabName $i)) }}</a>
 
