@@ -1,21 +1,10 @@
-{{ $tab := .Get "tabNum" }}
-{{ $tabID := print (.Parent.Get "tabID") $tab }}
-{{ $tabName := (print "tabName" $tab) }}
+{{ $tabName := .Get "tabName" }}
+{{ $tabID := delimit (shuffle (slice "a" "b" "c" "d" "e" "f")) "" }}
+{{ .Parent.Scratch.Add "tabName" (slice $tabName) }}
+{{ .Parent.Scratch.Add "tabID" (slice $tabID) }}
 
-{{ if eq $tab "1" }}
-
-<div class="tab-pane fade show active" id="tab{{ $tabID }}" role="tabpanel" aria-labelledby="nav-{{ $tabName }}">
-
-	{{ $.Inner | markdownify }}
-
-</div>
-
-{{ else }}
-
-<div class="tab-pane fade" id="tab{{ $tabID }}" role="tabpanel" aria-labelledby="nav-{{ $tabName }}">
+<div class="tab-pane fade show {{ if eq .Ordinal 0 }}active {{ end }}" id="{{ $tabID }}" role="tabpanel" aria-labelledby="nav-1">
 
 	{{ $.Inner | markdownify }}
 
 </div>
-
-{{ end }}
