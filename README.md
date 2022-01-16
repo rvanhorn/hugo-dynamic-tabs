@@ -43,12 +43,13 @@ theme = ["hugo-dynamic-tabs", "my-theme"]
 You need at least one nested tab shortcode inside the tabs shortcode for this theme component to properly work. Please see the **[Shortcodes Explanation](#Shortcodes-Explanation)** section for information on what each variable does. 
 
 ```
-{{< tabs tabTotal="3">}}
+{{< tabs tabTotal="1">}}
 {{< tab tabName="Tab 1" >}}
 
 **Tab 1 Content**
 
 {{< /tab >}}
+{{< /tabs >}}
 ```
 
 The following is an example of Hugo Dynamic Tabs being used with multiple nested tab shortcodes.
@@ -111,7 +112,7 @@ This is a child shortcode that is nested in the tabs shortcodes. Each tab shortc
 
 ##### Tabs not Showing Properly/CSS Issues.
 
-- This shortcode was built using [Bootstrap 4](https://getbootstrap.com/docs/4.4/) and will require some modification to **tab.html** and **tabs.html** to work with another framework or your own custom code. If you need help, please create an issue, and I can take a look. 
+- This shortcode was built using [Bootstrap 4](https://getbootstrap.com/docs/4.6/) and will require some modification to **tab.html** and **tabs.html** to work with another framework or your own custom code. If you need help, please create an issue, and I can take a look. 
 
 ## Demo Site
 
