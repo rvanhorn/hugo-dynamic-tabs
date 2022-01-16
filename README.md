@@ -49,6 +49,7 @@ You need at least one nested tab shortcode inside the tabs shortcode for this th
 **Tab 1 Content**
 
 {{< /tab >}}
+{{< /tabs >}}
 ```
 
 The following is an example of Hugo Dynamic Tabs being used with multiple nested tab shortcodes.
