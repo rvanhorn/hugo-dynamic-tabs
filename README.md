@@ -43,7 +43,7 @@ theme = ["hugo-dynamic-tabs", "my-theme"]
 You need at least one nested tab shortcode inside the tabs shortcode for this theme component to properly work. Please see the **[Shortcodes Explanation](#Shortcodes-Explanation)** section for information on what each variable does.
 
 ```
-{{< tabs tabTotal="3">}}
+{{< tabs tabTotal="1">}}
 {{< tab tabName="Tab 1" >}}
 
 **Tab 1 Content**
